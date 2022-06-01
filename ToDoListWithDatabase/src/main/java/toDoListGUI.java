@@ -30,10 +30,10 @@ public class toDoListGUI extends JFrame {
 
         addListeners();
         List<toDo> allToDo = db.getAllToDo();
-        setListData(allToDo);
+        showAllToDo(allToDo);
     }
 
-    void setListData(List<toDo> getList) {
+    void showAllToDo(List<toDo> getList) {
         listModel.clear();
         if (getList != null) {
             listModel.addAll(getList);
@@ -70,7 +70,7 @@ public class toDoListGUI extends JFrame {
                         db.deleteToDo(tD);
                     }
                     List<toDo> getList = db.getAllToDo();
-                    setListData(getList);
+                    showAllToDo(getList);
                 }
             }
         });
