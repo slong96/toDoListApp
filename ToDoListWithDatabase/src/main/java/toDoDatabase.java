@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class toDoDatabase {
-    private static final String DB_CONNECTION_URL = "jdbc:sqlite:database/todolist.sqlite";
+    private static final String DB_CONNECTION_URL = "jdbc:sqlite:todolist.sqlite";
     private static final String createTable = "CREATE TABLE IF NOT EXISTS to_do_list (to_do CHAR(255))";
     private static final String addSQL = "INSERT INTO to_do_list VALUES(?)";
     private static final String deleteSQL = "DELETE FROM to_do_list WHERE to_do = ?";
